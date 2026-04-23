@@ -45,7 +45,7 @@ const css = `
   .nav-cta{background:#F97316;color:#fff;padding:0.5rem 1.25rem;border-radius:0.3rem;font-weight:700;font-size:0.875rem;text-decoration:none;transition:background 0.2s;font-family:'Montserrat',sans-serif;}
   .nav-cta:hover{background:#ea6b0a;}
 
-  .hero{display:grid;grid-template-columns:1fr 1fr;min-height:85vh;}
+  .hero{display:grid;grid-template-columns:1fr 1fr;min-height:520px;}
   .hero-left{background:#fff;display:flex;flex-direction:column;justify-content:center;padding:4rem 3.5rem 4rem 5rem;}
   .hero-tag{display:inline-flex;align-items:center;gap:0.4rem;background:#e0f7fa;border:1px solid #9ee8f5;color:#0891b2;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 0.9rem;border-radius:2rem;margin-bottom:1.5rem;width:fit-content;}
   .hero h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2rem,3.2vw,3rem);line-height:1.08;color:#1a1a2e;margin-bottom:1.1rem;}
@@ -57,7 +57,7 @@ const css = `
   .trust-item{display:flex;align-items:center;gap:0.4rem;color:#777;font-size:0.875rem;}
   .trust-check{color:#22c55e;font-weight:700;}
 
-  .hero-right{overflow:hidden;display:flex;align-items:flex-end;justify-content:center;background:#f5f5f5;}
+  .hero-right{overflow:hidden;display:flex;align-items:flex-end;justify-content:center;background:#f5f5f5;height:520px;}
   .judge-img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
 
   .lenders-bar{background:#f0fbfc;border-top:1px solid #cceef5;border-bottom:1px solid #cceef5;padding:1.2rem 2.5rem;}
