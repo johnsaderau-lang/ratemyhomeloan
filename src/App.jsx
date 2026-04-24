@@ -45,20 +45,20 @@ const css = `
   .nav-cta{background:#F97316;color:#fff;padding:0.5rem 1.25rem;border-radius:0.3rem;font-weight:700;font-size:0.875rem;text-decoration:none;transition:background 0.2s;font-family:'Montserrat',sans-serif;}
   .nav-cta:hover{background:#ea6b0a;}
 
-  .hero{display:grid;grid-template-columns:1fr 1fr;min-height:520px;}
-  .hero-left{background:#fff;display:flex;flex-direction:column;justify-content:center;padding:4rem 3.5rem 4rem 5rem;}
+  .hero{position:relative;min-height:580px;overflow:hidden;display:flex;align-items:center;}
+  .hero-left{position:relative;z-index:2;padding:4rem 3.5rem 4rem 5rem;max-width:55%;}
   .hero-tag{display:inline-flex;align-items:center;gap:0.4rem;background:#e0f7fa;border:1px solid #9ee8f5;color:#0891b2;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 0.9rem;border-radius:2rem;margin-bottom:1.5rem;width:fit-content;}
-  .hero h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2rem,3.2vw,3rem);line-height:1.08;color:#1a1a2e;margin-bottom:1.1rem;}
+  .hero h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2rem,3.2vw,3rem);line-height:1.08;color:#fff;margin-bottom:1.1rem;}
   .hero h1 em{color:#0891b2;font-style:normal;}
-  .hero p{font-size:1.05rem;color:#555;line-height:1.7;margin-bottom:1.75rem;max-width:440px;}
+  .hero p{font-size:1.05rem;color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:1.75rem;max-width:440px;}
   .hero-cta{display:inline-flex;align-items:center;gap:0.5rem;background:#F97316;color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;padding:0.9rem 2rem;border-radius:0.35rem;border:none;cursor:pointer;transition:all 0.2s;margin-bottom:1.5rem;}
   .hero-cta:hover{background:#ea6b0a;transform:translateY(-1px);}
   .hero-trust{display:flex;gap:1.5rem;flex-wrap:wrap;}
-  .trust-item{display:flex;align-items:center;gap:0.4rem;color:#777;font-size:0.875rem;}
+  .trust-item{display:flex;align-items:center;gap:0.4rem;color:rgba(255,255,255,0.7);font-size:0.875rem;}
   .trust-check{color:#22c55e;font-weight:700;}
 
-  .hero-right{overflow:hidden;display:flex;align-items:flex-end;justify-content:center;background:#f5f5f5;height:520px;}
-  .judge-img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
+  .hero-right{position:absolute;inset:0;z-index:1;}
+  .judge-img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;}
 
   .lenders-bar{background:#f0fbfc;border-top:1px solid #cceef5;border-bottom:1px solid #cceef5;padding:1.2rem 2.5rem;}
   .lenders-inner{max-width:1100px;margin:0 auto;}
@@ -244,6 +244,8 @@ export default function RateMyHomeLoan() {
       {page === "home" && (
         <>
           <section className="hero">
+
+            <div className="hero-overlay" style={{position:"absolute",inset:0,zIndex:1,background:"linear-gradient(to right, rgba(15,76,92,0.88) 0%, rgba(15,76,92,0.7) 45%, rgba(15,76,92,0.1) 75%, transparent 100%)"}} />
             <div className="hero-left">
               <div className="hero-tag">⚖️ Free — takes 60 seconds</div>
               <h1>Is your home loan <em>guilty</em> of overcharging you?</h1>
