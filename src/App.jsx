@@ -48,7 +48,7 @@ const css = `
   .hero{position:relative;min-height:580px;overflow:hidden;display:flex;align-items:center;}
   .hero-left{position:relative;z-index:2;padding:4rem 3.5rem 4rem 5rem;max-width:55%;}
   .hero-tag{display:inline-flex;align-items:center;gap:0.4rem;background:#e0f7fa;border:1px solid #9ee8f5;color:#0891b2;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 0.9rem;border-radius:2rem;margin-bottom:1.5rem;width:fit-content;}
-  .hero h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2rem,3.2vw,3rem);line-height:1.08;color:#0f4c5c;margin-bottom:1.1rem;text-shadow:0 2px 8px rgba(0,0,0,0.8);}
+  .hero h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2rem,3.2vw,3rem);line-height:1.08;color:#0f4c5c;margin-bottom:1.1rem;}
   .hero h1 em{color:#0891b2;font-style:normal;}
   .hero p{font-size:1.05rem;color:rgba(255,255,255,0.9);line-height:1.7;margin-bottom:1.75rem;max-width:440px;}
   .hero-cta{display:inline-flex;align-items:center;gap:0.5rem;background:#F97316;color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;padding:0.9rem 2rem;border-radius:0.35rem;border:none;cursor:pointer;transition:all 0.2s;margin-bottom:1.5rem;}
