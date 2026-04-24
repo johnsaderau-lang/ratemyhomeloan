@@ -244,7 +244,7 @@ export default function RateMyHomeLoan() {
         <>
           <section className="hero">
 
-            <div className="hero-overlay" style={{position:"absolute",inset:0,zIndex:1,background:"linear-gradient(to right, rgba(10,40,50,0.97) 0%, rgba(10,40,50,0.95) 35%, rgba(10,40,50,0.75) 55%, rgba(10,40,50,0.2) 75%, transparent 100%)"}} />
+            <div className="hero-overlay" style={{position:"absolute",inset:0,zIndex:1,background:"linear-gradient(to right, rgba(10,40,50,1) 0%, rgba(10,40,50,1) 40%, rgba(10,40,50,0.8) 55%, rgba(10,40,50,0.2) 75%, transparent 100%)"}} />
             <div className="hero-left">
               <h1>Is your home loan <em>guilty</em> of overcharging you?</h1>
               <p>Put your rate on trial. We compare it against real market benchmarks across 20+ lenders and deliver an honest verdict — no signup, no obligation.</p>
