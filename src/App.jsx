@@ -63,8 +63,9 @@ const css = `
   .lenders-bar{background:#fff;border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;padding:1.2rem 2.5rem;}
   .lenders-inner{max-width:1100px;margin:0 auto;}
   .lenders-label{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#0891b2;margin-bottom:0.75rem;text-align:center;}
-  .lenders-grid{display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;}
-  .lender-pill{background:#fff;border:1px solid #e0e8ea;border-radius:0.4rem;padding:0.4rem 1rem;font-size:0.8rem;font-weight:700;color:#0f4c5c;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+  .lenders-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(110px, 1fr));gap:0.5rem;}
+  .lender-pill{background:#fff;border:1px solid #e0e8ea;border-radius:0.4rem;padding:0.5rem 1rem;box-shadow:0 1px 4px rgba(0,0,0,0.06);height:52px;display:flex;align-items:center;justify-content:center;}
+  .lender-logo{height:28px;width:auto;object-fit:contain;}
 
   .calc-section{padding:4.5rem 2.5rem;background:#fff;}
   .calc-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start;}
@@ -266,7 +267,25 @@ export default function RateMyHomeLoan() {
             <div className="lenders-inner">
               <div className="lenders-label">Comparing rates across Australia's leading lenders</div>
               <div className="lenders-grid">
-                {LENDERS_DISPLAY.map(l => <span key={l} className="lender-pill">{l}</span>)}
+                
+                <div className="lender-pill" key="CBA"><img src="/cba.svg" alt="CBA" className="lender-logo" /></div>
+                <div className="lender-pill" key="NAB"><img src="/nab.svg" alt="NAB" className="lender-logo" /></div>
+                <div className="lender-pill" key="ANZ"><img src="/anz.svg" alt="ANZ" className="lender-logo" /></div>
+                <div className="lender-pill" key="Westpac"><img src="/westpac.svg" alt="Westpac" className="lender-logo" /></div>
+                <div className="lender-pill" key="St George"><img src="/stgeorge.svg" alt="St George" className="lender-logo" /></div>
+                <div className="lender-pill" key="Macquarie"><img src="/macquarie.svg" alt="Macquarie" className="lender-logo" /></div>
+                <div className="lender-pill" key="ING"><img src="/ing.svg" alt="ING" className="lender-logo" /></div>
+                <div className="lender-pill" key="Suncorp"><img src="/suncorp.svg" alt="Suncorp" className="lender-logo" /></div>
+                <div className="lender-pill" key="Bankwest"><img src="/bankwest.svg" alt="Bankwest" className="lender-logo" /></div>
+                <div className="lender-pill" key="AMP"><img src="/amp.svg" alt="AMP" className="lender-logo" /></div>
+                <div className="lender-pill" key="Pepper Money"><img src="/pepper.svg" alt="Pepper Money" className="lender-logo" /></div>
+                <div className="lender-pill" key="Liberty"><img src="/liberty.svg" alt="Liberty" className="lender-logo" /></div>
+                <div className="lender-pill" key="La Trobe"><img src="/latrobe.svg" alt="La Trobe" className="lender-logo" /></div>
+                <div className="lender-pill" key="Resimac"><img src="/resimac.svg" alt="Resimac" className="lender-logo" /></div>
+                <div className="lender-pill" key="Firstmac"><img src="/firstmac.svg" alt="Firstmac" className="lender-logo" /></div>
+                <div className="lender-pill" key="Athena"><img src="/athena.svg" alt="Athena" className="lender-logo" /></div>
+                <div className="lender-pill" key="Ubank"><img src="/ubank.svg" alt="Ubank" className="lender-logo" /></div>
+              
               </div>
             </div>
           </div>
