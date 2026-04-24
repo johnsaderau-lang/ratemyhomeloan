@@ -67,7 +67,7 @@ const css = `
   .lenders-ticker:hover{animation-play-state:paused;}
   @keyframes lenders-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
   .lender-pill{background:none;border:none;box-shadow:none;padding:0 1rem;height:52px;width:auto;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
-  .lender-logo{width:120px;height:40px;object-fit:contain;}
+  .lender-logo{width:auto;height:36px;max-width:130px;object-fit:contain;}
 
   .calc-section{padding:4.5rem 2.5rem;background:#fff;}
   .calc-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start;}
@@ -266,40 +266,40 @@ export default function RateMyHomeLoan() {
             <div className="lenders-inner">
               <div className="lenders-label">Comparing rates across Australia's leading lenders</div>
               <div className="lenders-ticker">
-                <div className="lender-pill" key={`a-${0}`}><img src="/cba.png" alt="CBA" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${1}`}><img src="/nab" alt="NAB" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${2}`}><img src="/anz.png" alt="ANZ" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${3}`}><img src="/wbc.png" alt="Westpac" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${4}`}><img src="/STG.jpg" alt="St George" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${5}`}><img src="/mcq.jpeg" alt="Macquarie" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${6}`}><img src="/ING.png" alt="ING" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${7}`}><img src="/suncorp.png" alt="Suncorp" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${8}`}><img src="/bankwest.png" alt="Bankwest" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${9}`}><img src="/amp.svg" alt="AMP" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${10}`}><img src="/pepper.png" alt="Pepper Money" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${11}`}><img src="/liberty.png" alt="Liberty" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${12}`}><img src="/latrobe.png" alt="La Trobe" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${13}`}><img src="/resimac.jpeg" alt="Resimac" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${14}`}><img src="/firstmac.png" alt="Firstmac" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${15}`}><img src="/athena.jpeg" alt="Athena" className="lender-logo" /></div>
-                <div className="lender-pill" key={`a-${16}`}><img src="/ubank.jpeg" alt="Ubank" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${0}`}><img src="/cba.png" alt="CBA" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${1}`}><img src="/nab" alt="NAB" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${2}`}><img src="/anz.png" alt="ANZ" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${3}`}><img src="/wbc.png" alt="Westpac" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${4}`}><img src="/STG.jpg" alt="St George" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${5}`}><img src="/mcq.jpeg" alt="Macquarie" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${6}`}><img src="/ING.png" alt="ING" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${7}`}><img src="/suncorp.png" alt="Suncorp" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${8}`}><img src="/bankwest.png" alt="Bankwest" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${9}`}><img src="/amp.svg" alt="AMP" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${10}`}><img src="/pepper.png" alt="Pepper Money" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${11}`}><img src="/liberty.png" alt="Liberty" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${12}`}><img src="/latrobe.png" alt="La Trobe" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${13}`}><img src="/resimac.jpeg" alt="Resimac" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${14}`}><img src="/firstmac.png" alt="Firstmac" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${15}`}><img src="/athena.jpeg" alt="Athena" className="lender-logo" /></div>
-                <div className="lender-pill" key={`b-${16}`}><img src="/ubank.jpeg" alt="Ubank" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${0}`}><img src="/cba.png" alt="CBA" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${1}`}><img src="/nab" alt="NAB" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${2}`}><img src="/anz.png" alt="ANZ" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${3}`}><img src="/wbc.png" alt="Westpac" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${4}`}><img src="/STG.jpg" alt="St George" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${5}`}><img src="/mcq.jpeg" alt="Macquarie" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${6}`}><img src="/ING.png" alt="ING" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${7}`}><img src="/suncorp.png" alt="Suncorp" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${8}`}><img src="/bankwest.png" alt="Bankwest" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${9}`}><img src="/amp.svg" alt="AMP" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${10}`}><img src="/pepper.png" alt="Pepper Money" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${11}`}><img src="/liberty.png" alt="Liberty" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${12}`}><img src="/latrobe.png" alt="La Trobe" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${13}`}><img src="/resimac.jpeg" alt="Resimac" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${14}`}><img src="/firstmac.png" alt="Firstmac" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${15}`}><img src="/athena.jpeg" alt="Athena" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`a-${16}`}><img src="/ubank.jpeg" alt="Ubank" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${0}`}><img src="/cba.png" alt="CBA" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${1}`}><img src="/nab" alt="NAB" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${2}`}><img src="/anz.png" alt="ANZ" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${3}`}><img src="/wbc.png" alt="Westpac" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${4}`}><img src="/STG.jpg" alt="St George" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${5}`}><img src="/mcq.jpeg" alt="Macquarie" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${6}`}><img src="/ING.png" alt="ING" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${7}`}><img src="/suncorp.png" alt="Suncorp" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${8}`}><img src="/bankwest.png" alt="Bankwest" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${9}`}><img src="/amp.svg" alt="AMP" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${10}`}><img src="/pepper.png" alt="Pepper Money" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${11}`}><img src="/liberty.png" alt="Liberty" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${12}`}><img src="/latrobe.png" alt="La Trobe" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${13}`}><img src="/resimac.jpeg" alt="Resimac" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${14}`}><img src="/firstmac.png" alt="Firstmac" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${15}`}><img src="/athena.jpeg" alt="Athena" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
+                <div className="lender-pill" key={`b-${16}`}><img src="/ubank.jpeg" alt="Ubank" className="lender-logo" style={{width:'auto',height:'36px',maxWidth:'130px',objectFit:'contain'}} /></div>
               </div>
             </div>
           </div>
