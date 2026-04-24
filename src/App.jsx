@@ -29,7 +29,7 @@ const LENDERS_DISPLAY = [
 ];
 
 const WEBHOOK_URL = "https://hook.eu1.make.com/trzjb66urt9ry46clbb6s1mprs8tkin7";
-const JUDGE_IMAGE = "/image2.png";
+const JUDGE_IMAGE = "/image.png";
 
 const css = `
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Source+Sans+3:wght@400;500;600&display=swap');
@@ -60,11 +60,11 @@ const css = `
   .hero-right{position:absolute;inset:0;z-index:1;}
   .judge-img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;}
 
-  .lenders-bar{background:#f0fbfc;border-top:1px solid #cceef5;border-bottom:1px solid #cceef5;padding:1.2rem 2.5rem;}
+  .lenders-bar{background:#fff;border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;padding:1.2rem 2.5rem;}
   .lenders-inner{max-width:1100px;margin:0 auto;}
   .lenders-label{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#0891b2;margin-bottom:0.75rem;text-align:center;}
-  .lenders-grid{display:flex;flex-wrap:wrap;gap:0.4rem;justify-content:center;}
-  .lender-pill{background:#fff;border:1px solid #cceef5;border-radius:2rem;padding:0.25rem 0.8rem;font-size:0.78rem;font-weight:600;color:#0f4c5c;}
+  .lenders-grid{display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;}
+  .lender-pill{background:#fff;border:1px solid #e0e8ea;border-radius:0.4rem;padding:0.4rem 1rem;font-size:0.8rem;font-weight:700;color:#0f4c5c;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
 
   .calc-section{padding:4.5rem 2.5rem;background:#fff;}
   .calc-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start;}
