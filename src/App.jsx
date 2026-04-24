@@ -237,7 +237,7 @@ export default function RateMyHomeLoan() {
           <li><a href="#" onClick={e => { e.preventDefault(); setPage("how"); }}>How It Works</a></li>
           <li><a href="#" onClick={e => { e.preventDefault(); setPage("about"); }}>About</a></li>
         </ul>
-        <a href="#" className="nav-cta" onClick={e => { e.preventDefault(); setPage("home"); setTimeout(scrollToCalc, 100); }}>Check My Rate â</a>
+        <a href="#" className="nav-cta" onClick={e => { e.preventDefault(); setPage("home"); setTimeout(scrollToCalc, 100); }}>Check My Rate →</a>
       </nav>
 
       {page === "home" && (
@@ -246,14 +246,14 @@ export default function RateMyHomeLoan() {
 
             <div className="hero-overlay" style={{position:"absolute",inset:0,zIndex:1,background:"linear-gradient(to right, rgba(15,76,92,0.88) 0%, rgba(15,76,92,0.7) 45%, rgba(15,76,92,0.1) 75%, transparent 100%)"}} />
             <div className="hero-left">
-              <div className="hero-tag">âï¸ Free â takes 60 seconds</div>
+              <div className="hero-tag">⚖️ Free — takes 60 seconds</div>
               <h1>Is your home loan <em>guilty</em> of overcharging you?</h1>
-              <p>Put your rate on trial. We compare it against real market benchmarks across 20+ lenders and deliver an honest verdict â no signup, no obligation.</p>
-              <button className="hero-cta" onClick={scrollToCalc}>Start the trial â</button>
+              <p>Put your rate on trial. We compare it against real market benchmarks across 20+ lenders and deliver an honest verdict — no signup, no obligation.</p>
+              <button className="hero-cta" onClick={scrollToCalc}>Start the trial →</button>
               <div className="hero-trust">
-                <span className="trust-item"><span className="trust-check">â</span> 100% free</span>
-                <span className="trust-item"><span className="trust-check">â</span> No obligation</span>
-                <span className="trust-item"><span className="trust-check">â</span> Updated monthly</span>
+                <span className="trust-item"><span className="trust-check">✓</span> 100% free</span>
+                <span className="trust-item"><span className="trust-check">✓</span> No obligation</span>
+                <span className="trust-item"><span className="trust-check">✓</span> Updated monthly</span>
               </div>
             </div>
             <div className="hero-right">
@@ -293,15 +293,15 @@ export default function RateMyHomeLoan() {
               <div className="calc-info">
                 <div className="section-tag">The Trial</div>
                 <h2 className="section-h2">Find out if your lender is overcharging you</h2>
-                <p>Australian banks have been profiting from customer inertia for years. Most homeowners have no idea whether their rate is competitive â and lenders count on that.</p>
+                <p>Australian banks have been profiting from customer inertia for years. Most homeowners have no idea whether their rate is competitive — and lenders count on that.</p>
                 <ul className="info-list">
-                  {["Enter your current rate and we'll compare it to the market benchmark for your exact loan type","Get a verdict â Guilty, Under Review, or Acquitted â with a score out of 10","See how much you could save annually by switching to a better rate"].map((t, i) => (
-                    <li key={i}><span className="info-bullet"><span>â</span></span>{t}</li>
+                  {["Enter your current rate and we'll compare it to the market benchmark for your exact loan type","Get a verdict — Guilty, Under Review, or Acquitted — with a score out of 10","See how much you could save annually by switching to a better rate"].map((t, i) => (
+                    <li key={i}><span className="info-bullet"><span>✓</span></span>{t}</li>
                   ))}
                 </ul>
               </div>
               <div className="calc-card">
-                <div className="calc-card-title">âï¸ Submit your evidence</div>
+                <div className="calc-card-title">⚖️ Submit your evidence</div>
                 <div className="form-group">
                   <label className="form-label">Loan Purpose</label>
                   <div className="toggle-group">
@@ -330,7 +330,7 @@ export default function RateMyHomeLoan() {
                     {Object.keys(LENDER_TYPES).map(l => <option key={l}>{l}</option>)}
                   </select>
                 </div>
-                <button className="submit-btn" onClick={calculate} disabled={!rate || !amount}>Deliver the verdict â</button>
+                <button className="submit-btn" onClick={calculate} disabled={!rate || !amount}>Deliver the verdict →</button>
               </div>
             </div>
           </section>
@@ -357,7 +357,7 @@ export default function RateMyHomeLoan() {
             {result.verdict !== "acquitted" && result.savingHigh > 0 && (
               <div className="savings-card">
                 <div className="savings-label">Potential annual savings by switching</div>
-                <div className="savings-amount">${result.savingLow.toLocaleString()} â ${result.savingHigh.toLocaleString()}</div>
+                <div className="savings-amount">${result.savingLow.toLocaleString()} – ${result.savingHigh.toLocaleString()}</div>
                 <div className="savings-sub">Based on a 25-year loan term at market benchmark rate</div>
               </div>
             )}
@@ -365,18 +365,18 @@ export default function RateMyHomeLoan() {
               {!submitted ? (
                 <>
                   <h4>{result.verdict === "acquitted" ? "Want us to monitor your rate?" : "Want help reducing your rate?"}</h4>
-                  <p>{result.verdict === "acquitted" ? "We'll alert you if the market moves against you. Leave your details and we'll keep an eye on it." : "Our team can review your situation and discuss your options â no obligation, no cost."}</p>
+                  <p>{result.verdict === "acquitted" ? "We'll alert you if the market moves against you. Leave your details and we'll keep an eye on it." : "Our team can review your situation and discuss your options — no obligation, no cost."}</p>
                   <div className="lead-row">
                     <input className="lead-input" placeholder="Your name" value={leadName} onChange={e => setLeadName(e.target.value)} />
                     <input className="lead-input" placeholder="Phone number" value={leadPhone} onChange={e => setLeadPhone(e.target.value)} />
                   </div>
                   <input className="lead-input" placeholder="Email address" value={leadEmail} onChange={e => setLeadEmail(e.target.value)} style={{ width: "100%", marginBottom: "0.65rem" }} />
-                  <button className="submit-btn" onClick={submitLead} disabled={!leadName || !leadPhone || !leadEmail || loading}>{loading ? "Submitting..." : "Get help with my rate â"}</button>
+                  <button className="submit-btn" onClick={submitLead} disabled={!leadName || !leadPhone || !leadEmail || loading}>{loading ? "Submitting..." : "Get help with my rate →"}</button>
                   <button className="retry-btn" onClick={() => { setPage("home"); setResult(null); setRate(""); setAmount(""); }}>Check another rate</button>
                 </>
               ) : (
                 <div className="success-box">
-                  <div style={{ fontSize: "2.5rem" }}>â</div>
+                  <div style={{ fontSize: "2.5rem" }}>✅</div>
                   <h4>Case filed successfully</h4>
                   <p>Our team will be in touch shortly to discuss your options.</p>
                 </div>
@@ -395,7 +395,7 @@ export default function RateMyHomeLoan() {
               {[
                 { n: "01", title: "Submit the evidence", desc: "Enter your current rate, loan amount, lender, and loan type. Takes less than 60 seconds." },
                 { n: "02", title: "We examine the facts", desc: "We compare your rate against current market benchmarks updated monthly from RBA data and lender comparisons." },
-                { n: "03", title: "The verdict is delivered", desc: "Guilty, Under Review, or Acquitted â with a score out of 10 and your potential annual savings." },
+                { n: "03", title: "The verdict is delivered", desc: "Guilty, Under Review, or Acquitted — with a score out of 10 and your potential annual savings." },
               ].map(s => (
                 <div key={s.n} className="step">
                   <div className="step-num">{s.n}</div>
@@ -413,17 +413,17 @@ export default function RateMyHomeLoan() {
           <div className="about-inner">
             <div className="section-tag">About</div>
             <h2 className="section-h2" style={{ marginBottom: "1.25rem" }}>Why we built this</h2>
-            <p>Australian lenders have been profiting from customer inertia for years. Most homeowners have no idea whether their rate is competitive â and banks count on that.</p>
-            <p>Rate My Home Loan was built to change that. We compare your rate against current market benchmarks and give you a straight verdict â no affiliate games, no paid rankings.</p>
+            <p>Australian lenders have been profiting from customer inertia for years. Most homeowners have no idea whether their rate is competitive — and banks count on that.</p>
+            <p>Rate My Home Loan was built to change that. We compare your rate against current market benchmarks and give you a straight verdict — no affiliate games, no paid rankings.</p>
             <p>If your rate is guilty, we can help you fight back.</p>
-            <div className="disclaimer">Benchmarks are updated monthly based on RBA lender rate statistics and publicly available comparison data. Results are indicative only and do not constitute financial advice. Rate My Home Loan is independently operated and not affiliated with any bank or lender. Always consult a licensed mortgage broker before making financial decisions. Â© 2026 RateMyHomeLoan.com.au</div>
+            <div className="disclaimer">Benchmarks are updated monthly based on RBA lender rate statistics and publicly available comparison data. Results are indicative only and do not constitute financial advice. Rate My Home Loan is independently operated and not affiliated with any bank or lender. Always consult a licensed mortgage broker before making financial decisions. © 2026 RateMyHomeLoan.com.au</div>
           </div>
         </div>
       )}
 
       <footer className="footer">
-        <p>Â© 2026 RateMyHomeLoan.com.au &nbsp;Â·&nbsp; <a href="#" onClick={e => { e.preventDefault(); setPage("how"); }}>How It Works</a> &nbsp;Â·&nbsp; <a href="#" onClick={e => { e.preventDefault(); setPage("about"); }}>About</a></p>
-        <p style={{ marginTop: "0.5rem" }}>Benchmarks updated monthly. General information only â not financial advice.</p>
+        <p>© 2026 RateMyHomeLoan.com.au &nbsp;·&nbsp; <a href="#" onClick={e => { e.preventDefault(); setPage("how"); }}>How It Works</a> &nbsp;·&nbsp; <a href="#" onClick={e => { e.preventDefault(); setPage("about"); }}>About</a></p>
+        <p style={{ marginTop: "0.5rem" }}>Benchmarks updated monthly. General information only — not financial advice.</p>
       </footer>
     </>
   );
