@@ -48,7 +48,7 @@ const css = `
   .hero{position:relative;min-height:580px;overflow:hidden;display:flex;align-items:center;}
   .hero-left{position:relative;z-index:2;padding:4rem 3.5rem 4rem 5rem;max-width:55%;}
   .hero-tag{display:inline-flex;align-items:center;gap:0.4rem;background:#e0f7fa;border:1px solid #9ee8f5;color:#0891b2;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 0.9rem;border-radius:2rem;margin-bottom:1.5rem;width:fit-content;}
-  .hero h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2rem,3.2vw,3rem);line-height:1.08;color:#ffffff;margin-bottom:1.1rem;}
+  .hero h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2rem,3.2vw,3rem);line-height:1.08;color:#ffffff;margin-bottom:1.1rem;text-shadow:0 2px 8px rgba(0,0,0,0.8);}
   .hero h1 em{color:#0891b2;font-style:normal;}
   .hero p{font-size:1.05rem;color:rgba(255,255,255,0.9);line-height:1.7;margin-bottom:1.75rem;max-width:440px;}
   .hero-cta{display:inline-flex;align-items:center;gap:0.5rem;background:#F97316;color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;padding:0.9rem 2rem;border-radius:0.35rem;border:none;cursor:pointer;transition:all 0.2s;margin-bottom:1.5rem;}
@@ -58,13 +58,15 @@ const css = `
   .trust-check{color:#22c55e;font-weight:700;}
 
   .hero-right{position:absolute;inset:0;z-index:1;}
-  .judge-img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;}
+  .judge-img{width:100%;height:100%;object-fit:cover;object-position:right top;display:block;}
 
-  .lenders-bar{background:#fff;border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;padding:1.2rem 2.5rem;}
+  .lenders-bar{background:#fff;border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;padding:1.2rem 2.5rem;overflow:hidden;}
   .lenders-inner{max-width:1100px;margin:0 auto;}
   .lenders-label{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#0891b2;margin-bottom:0.75rem;text-align:center;}
-  .lenders-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(110px, 1fr));gap:0.5rem;}
-  .lender-pill{background:#fff;border:1px solid #e0e8ea;border-radius:0.4rem;padding:0.5rem 1rem;box-shadow:0 1px 4px rgba(0,0,0,0.06);height:52px;display:flex;align-items:center;justify-content:center;}
+  .lenders-ticker{display:flex;gap:0.5rem;width:max-content;animation:lenders-scroll 30s linear infinite;}
+  .lenders-ticker:hover{animation-play-state:paused;}
+  @keyframes lenders-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .lender-pill{background:#fff;border:1px solid #e0e8ea;border-radius:0.4rem;padding:0.5rem 1rem;box-shadow:0 1px 4px rgba(0,0,0,0.06);height:52px;width:130px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
   .lender-logo{height:28px;width:auto;object-fit:contain;}
 
   .calc-section{padding:4.5rem 2.5rem;background:#fff;}
@@ -244,7 +246,7 @@ export default function RateMyHomeLoan() {
         <>
           <section className="hero">
 
-            <div className="hero-overlay" style={{position:"absolute",inset:0,zIndex:1,background:"linear-gradient(to right, rgba(10,40,50,1) 0%, rgba(10,40,50,1) 40%, rgba(10,40,50,0.8) 55%, rgba(10,40,50,0.2) 75%, transparent 100%)"}} />
+            <div className="hero-overlay" style={{position:"absolute",inset:0,zIndex:1,background:"linear-gradient(to right, rgba(10,40,50,1.0) 0%, rgba(10,40,50,1.0) 45%, rgba(10,40,50,0.6) 65%, transparent 100%)"}} />
             <div className="hero-left">
               <h1>Is your home loan <em>guilty</em> of overcharging you?</h1>
               <p>Put your rate on trial. We compare it against real market benchmarks across 20+ lenders and deliver an honest verdict — no signup, no obligation.</p>
@@ -263,26 +265,41 @@ export default function RateMyHomeLoan() {
           <div className="lenders-bar">
             <div className="lenders-inner">
               <div className="lenders-label">Comparing rates across Australia's leading lenders</div>
-              <div className="lenders-grid">
-                
-                <div className="lender-pill" key="CBA"><img src="/cba.svg" alt="CBA" className="lender-logo" /></div>
-                <div className="lender-pill" key="NAB"><img src="/nab.svg" alt="NAB" className="lender-logo" /></div>
-                <div className="lender-pill" key="ANZ"><img src="/anz.svg" alt="ANZ" className="lender-logo" /></div>
-                <div className="lender-pill" key="Westpac"><img src="/westpac.svg" alt="Westpac" className="lender-logo" /></div>
-                <div className="lender-pill" key="St George"><img src="/stgeorge.svg" alt="St George" className="lender-logo" /></div>
-                <div className="lender-pill" key="Macquarie"><img src="/macquarie.svg" alt="Macquarie" className="lender-logo" /></div>
-                <div className="lender-pill" key="ING"><img src="/ing.svg" alt="ING" className="lender-logo" /></div>
-                <div className="lender-pill" key="Suncorp"><img src="/suncorp.svg" alt="Suncorp" className="lender-logo" /></div>
-                <div className="lender-pill" key="Bankwest"><img src="/bankwest.svg" alt="Bankwest" className="lender-logo" /></div>
-                <div className="lender-pill" key="AMP"><img src="/amp.svg" alt="AMP" className="lender-logo" /></div>
-                <div className="lender-pill" key="Pepper Money"><img src="/pepper.svg" alt="Pepper Money" className="lender-logo" /></div>
-                <div className="lender-pill" key="Liberty"><img src="/liberty.svg" alt="Liberty" className="lender-logo" /></div>
-                <div className="lender-pill" key="La Trobe"><img src="/latrobe.svg" alt="La Trobe" className="lender-logo" /></div>
-                <div className="lender-pill" key="Resimac"><img src="/resimac.svg" alt="Resimac" className="lender-logo" /></div>
-                <div className="lender-pill" key="Firstmac"><img src="/firstmac.svg" alt="Firstmac" className="lender-logo" /></div>
-                <div className="lender-pill" key="Athena"><img src="/athena.svg" alt="Athena" className="lender-logo" /></div>
-                <div className="lender-pill" key="Ubank"><img src="/ubank.svg" alt="Ubank" className="lender-logo" /></div>
-              
+              <div className="lenders-ticker">
+                <div className="lender-pill" key={`a-${0}`}><img src="/cba.svg" alt="CBA" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${1}`}><img src="/nab.svg" alt="NAB" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${2}`}><img src="/anz.svg" alt="ANZ" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${3}`}><img src="/westpac.svg" alt="Westpac" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${4}`}><img src="/stgeorge.svg" alt="St George" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${5}`}><img src="/macquarie.svg" alt="Macquarie" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${6}`}><img src="/ing.svg" alt="ING" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${7}`}><img src="/suncorp.svg" alt="Suncorp" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${8}`}><img src="/bankwest.svg" alt="Bankwest" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${9}`}><img src="/amp.svg" alt="AMP" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${10}`}><img src="/pepper.svg" alt="Pepper Money" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${11}`}><img src="/liberty.svg" alt="Liberty" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${12}`}><img src="/latrobe.svg" alt="La Trobe" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${13}`}><img src="/resimac.svg" alt="Resimac" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${14}`}><img src="/firstmac.svg" alt="Firstmac" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${15}`}><img src="/athena.svg" alt="Athena" className="lender-logo" /></div>
+                <div className="lender-pill" key={`a-${16}`}><img src="/ubank.svg" alt="Ubank" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${0}`}><img src="/cba.svg" alt="CBA" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${1}`}><img src="/nab.svg" alt="NAB" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${2}`}><img src="/anz.svg" alt="ANZ" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${3}`}><img src="/westpac.svg" alt="Westpac" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${4}`}><img src="/stgeorge.svg" alt="St George" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${5}`}><img src="/macquarie.svg" alt="Macquarie" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${6}`}><img src="/ing.svg" alt="ING" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${7}`}><img src="/suncorp.svg" alt="Suncorp" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${8}`}><img src="/bankwest.svg" alt="Bankwest" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${9}`}><img src="/amp.svg" alt="AMP" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${10}`}><img src="/pepper.svg" alt="Pepper Money" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${11}`}><img src="/liberty.svg" alt="Liberty" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${12}`}><img src="/latrobe.svg" alt="La Trobe" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${13}`}><img src="/resimac.svg" alt="Resimac" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${14}`}><img src="/firstmac.svg" alt="Firstmac" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${15}`}><img src="/athena.svg" alt="Athena" className="lender-logo" /></div>
+                <div className="lender-pill" key={`b-${16}`}><img src="/ubank.svg" alt="Ubank" className="lender-logo" /></div>
               </div>
             </div>
           </div>
