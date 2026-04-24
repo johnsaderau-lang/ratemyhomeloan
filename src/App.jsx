@@ -48,13 +48,13 @@ const css = `
   .hero{position:relative;min-height:580px;overflow:hidden;display:flex;align-items:center;}
   .hero-left{position:relative;z-index:2;padding:4rem 3.5rem 4rem 5rem;max-width:55%;}
   .hero-tag{display:inline-flex;align-items:center;gap:0.4rem;background:#e0f7fa;border:1px solid #9ee8f5;color:#0891b2;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 0.9rem;border-radius:2rem;margin-bottom:1.5rem;width:fit-content;}
-  .hero h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2rem,3.2vw,3rem);line-height:1.08;color:#fff;margin-bottom:1.1rem;}
+  .hero h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2rem,3.2vw,3rem);line-height:1.08;color:#ffffff;margin-bottom:1.1rem;}
   .hero h1 em{color:#0891b2;font-style:normal;}
-  .hero p{font-size:1.05rem;color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:1.75rem;max-width:440px;}
+  .hero p{font-size:1.05rem;color:rgba(255,255,255,0.9);line-height:1.7;margin-bottom:1.75rem;max-width:440px;}
   .hero-cta{display:inline-flex;align-items:center;gap:0.5rem;background:#F97316;color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;padding:0.9rem 2rem;border-radius:0.35rem;border:none;cursor:pointer;transition:all 0.2s;margin-bottom:1.5rem;}
   .hero-cta:hover{background:#ea6b0a;transform:translateY(-1px);}
   .hero-trust{display:flex;gap:1.5rem;flex-wrap:wrap;}
-  .trust-item{display:flex;align-items:center;gap:0.4rem;color:rgba(255,255,255,0.7);font-size:0.875rem;}
+  .trust-item{display:flex;align-items:center;gap:0.4rem;color:rgba(255,255,255,0.9);font-size:0.875rem;}
   .trust-check{color:#22c55e;font-weight:700;}
 
   .hero-right{position:absolute;inset:0;z-index:1;}
@@ -244,7 +244,7 @@ export default function RateMyHomeLoan() {
         <>
           <section className="hero">
 
-            <div className="hero-overlay" style={{position:"absolute",inset:0,zIndex:1,background:"linear-gradient(to right, rgba(15,76,92,0.88) 0%, rgba(15,76,92,0.7) 45%, rgba(15,76,92,0.1) 75%, transparent 100%)"}} />
+            <div className="hero-overlay" style={{position:"absolute",inset:0,zIndex:1,background:"linear-gradient(to right, rgba(10,40,50,0.97) 0%, rgba(10,40,50,0.95) 35%, rgba(10,40,50,0.75) 55%, rgba(10,40,50,0.2) 75%, transparent 100%)"}} />
             <div className="hero-left">
               <h1>Is your home loan <em>guilty</em> of overcharging you?</h1>
               <p>Put your rate on trial. We compare it against real market benchmarks across 20+ lenders and deliver an honest verdict — no signup, no obligation.</p>
