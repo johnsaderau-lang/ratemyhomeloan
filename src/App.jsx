@@ -29,7 +29,7 @@ const LENDERS_DISPLAY = [
 ];
 
 const WEBHOOK_URL = "https://hook.eu1.make.com/trzjb66urt9ry46clbb6s1mprs8tkin7";
-const JUDGE_IMAGE = "/image.png";
+const JUDGE_IMAGE = "/image2.png";
 
 const css = `
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Source+Sans+3:wght@400;500;600&display=swap');
