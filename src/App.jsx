@@ -66,8 +66,8 @@ const css = `
   .lenders-ticker{display:flex;gap:0.5rem;width:max-content;animation:lenders-scroll 30s linear infinite;}
   .lenders-ticker:hover{animation-play-state:paused;}
   @keyframes lenders-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-  .lender-pill{background:#fff;border:1px solid #e0e8ea;border-radius:0.4rem;padding:0.5rem 1rem;box-shadow:0 1px 4px rgba(0,0,0,0.06);height:52px;width:130px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
-  .lender-logo{height:28px;width:auto;object-fit:contain;}
+  .lender-pill{background:none;border:none;box-shadow:none;padding:0 1rem;height:52px;width:auto;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+  .lender-logo{width:120px;height:40px;object-fit:contain;}
 
   .calc-section{padding:4.5rem 2.5rem;background:#fff;}
   .calc-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start;}
