@@ -675,7 +675,7 @@ export default function RateMyHomeLoan() {
 
             <div className="hero-overlay" style={{position:"absolute",inset:0,zIndex:1,background:"linear-gradient(to right, rgba(15,76,92,0.88) 0%, rgba(15,76,92,0.7) 45%, rgba(15,76,92,0.1) 75%, transparent 100%)"}} />
             <div className="hero-left">
-              <div className="hero-tag">⚖️ Free — takes 60 seconds</div>
+              
               <h1>Is your home loan <em>guilty</em> of overcharging you?</h1>
               <p>Put your rate on trial. We compare it against real market benchmarks across 20+ lenders and deliver an honest verdict — no signup, no obligation.</p>
               <button className="hero-cta" onClick={scrollToCalc}>Start the trial →</button>
