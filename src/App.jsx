@@ -44,7 +44,7 @@ export default function App(){
         <div className="hi"><img src={J} alt="Judge"/></div>
         <div className="hf"/>
         <div className="hb">
-          <h1>Put your home loan <em>on trial</em></h1>
+          <h1>Put your<br/>home loan<br/><em>on trial</em></h1>
           <p>Compare your rate against the current market and get the verdict.</p>
           <button className="btn" onClick={()=>go("quiz")}>Start the trial &#8594;</button>
           <div className="trust"><span><span className="tick">&#10003;</span> 100% free</span><span><span className="tick">&#10003;</span> No obligation</span><span><span className="tick">&#10003;</span> Updated monthly</span></div>
