@@ -2,11 +2,11 @@ import { useState } from "react";
 var J="/judge 3.png";
 var M=6.19;
 var L=[
-{name:"CommBank",s:"/cba.png"},
+{name:"CommBank",s:"/cba.png",sc:1.8},
 {name:"NAB",s:"/nab"},
 {name:"ANZ",s:"/anz.png"},
 {name:"Westpac",s:"/wbc.png",sc:1.8},
-{name:"St George",s:"/STG.jpg",sc:2.4},
+{name:"St George",s:"/STG.jpg",sc:3.0},
 {name:"Macquarie",s:"/macquarie.svg"},
 {name:"ING",s:"/ING.png"},
 {name:"Suncorp",s:"/suncorp.png"},
