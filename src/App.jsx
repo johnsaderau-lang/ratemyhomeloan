@@ -44,20 +44,20 @@ export default function App(){
         <div className="hi"><img src={J} alt="Judge"/></div>
         <div className="hf"/>
         <div className="hb">
-          <h1>Is your bank <em>guilty</em> of overcharging you?</h1>
-          <p>Compare your rate against real lenders and get an honest verdict.</p>
+          <h1>Put your home loan <em>on trial</em>.</h1>
+          <p>Compare your rate against the current market and get the verdict.</p>
           <button className="btn" onClick={()=>go("quiz")}>Start the trial &#8594;</button>
           <div className="trust"><span><span className="tick">&#10003;</span> 100% free</span><span><span className="tick">&#10003;</span> No obligation</span><span><span className="tick">&#10003;</span> Updated monthly</span></div>
         </div>
       </div>
-      <div className="subtext-mobile">Compare your rate against real lenders and get an honest verdict.</div>
+      <div className="subtext-mobile">Compare your rate against the current market and get the verdict.</div>
       <div className="trust-mobile"><span><span className="tick">&#10003;</span> 100% free</span><span><span className="tick">&#10003;</span> No obligation</span><span><span className="tick">&#10003;</span> Updated monthly</span></div>
       <div className="tw"><div className="ticker">
         {dl.map((l,i)=>(<div key={i} className="lc"><img src={l.s} alt={l.name} style={{transform:l.sc?"scale("+l.sc+")":undefined,maxHeight:"32px",maxWidth:"100px",width:"auto",height:"auto",objectFit:"contain"}} onError={e=>{e.target.style.display="none";e.target.nextSibling.style.display="block";}}/><span style={{display:"none",fontWeight:700,fontSize:".7rem",color:"#0f4c5c"}}>{l.name}</span></div>))}
       </div></div>
       <div className="sec" style={{textAlign:"center"}}>
-        <div className="st">Find out if your lender is overcharging you</div>
-        <p className="ss">Enter your current rate and get a verdict in 60 seconds</p>
+        <div className="st">Is your bank guilty of overcharging you?</div>
+        <p className="ss">Enter your current rate and get a verdict in 60 seconds.</p>
         <button className="btn" onClick={()=>go("quiz")}>Get My Verdict &#8594;</button>
       </div>
     </>}
