@@ -30,7 +30,7 @@ export default function App(){
   const [dn,setDn]=useState(false);
   const go=p=>{setPg(p);window.scrollTo(0,0);};
   const check=()=>{const r=parseFloat(fm.rate);if(!r||!fm.amt)return;const v=vd(r),d=r-M;setRes({...v,r,d:d.toFixed(2),lo:Math.max(0,Math.round(d*.8*parseFloat(fm.amt)/100)),hi:Math.max(0,Math.round(d*parseFloat(fm.amt)/100))});go("result");};
-  const send=()=>{if(!ld.name||!ld.phone||!ld.email)return;fetch("https://hook.eu1.make.com/your-webhook",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({source:"ratemyhomeloan",...ld,...fm,verdict:res?.label})}).catch(()=>{});setDn(true);};
+  const send=()=>{if(!ld.name||!ld.phone||!ld.email)return;fetch("https://hook.eu1.make.com/gegqff5hxhba8ivp7cyfitoxj2fdgsk2",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({source:"ratemyhomeloan",name:ld.name,phone:ld.phone,email:ld.email,rate:fm.rate,amt:fm.amt,lender:fm.lender,tp:fm.tp,rt:fm.rt,verdict:res?.label})}).catch(()=>{});setDn(true);};
   const dl=[...L,...L];
   return (<>
     <style dangerouslySetInnerHTML={{__html:CSS}}/>
