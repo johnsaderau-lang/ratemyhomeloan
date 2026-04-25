@@ -35,7 +35,7 @@ export default function App(){
   return (<>
     <style dangerouslySetInnerHTML={{__html:CSS}}/>
     <nav className="nav">
-      <div className="logo">RateMy<span>Home</span>Loan.com.au</div>
+      <div className="logo">rate<span>my</span>home<span>loan</span>.com.au</div>
       <div className="nl"><a onClick={()=>go("home")}>Home</a><a onClick={()=>go("how")}>How It Works</a><a onClick={()=>go("about")}>About</a></div>
       <button className="ncta" onClick={()=>go("quiz")}>Check My Rate</button>
     </nav>
