@@ -5,8 +5,8 @@ var L=[
 {name:"CommBank",s:"/cba.png"},
 {name:"NAB",s:"/nab"},
 {name:"ANZ",s:"/anz.png"},
-{name:"Westpac",s:"/wbc.png"},
-{name:"St George",s:"/STG.jpg"},
+{name:"Westpac",s:"/wbc.png",sc:1.8},
+{name:"St George",s:"/STG.jpg",sc:1.7},
 {name:"Macquarie",s:"/macquarie.svg"},
 {name:"ING",s:"/ING.png"},
 {name:"Suncorp",s:"/suncorp.png"},
@@ -14,7 +14,7 @@ var L=[
 {name:"AMP",s:"/amp.svg"},
 {name:"Pepper Money",s:"/pepper.png"},
 {name:"Liberty",s:"/liberty.png"},
-{name:"La Trobe",s:"/latrobe.png"},
+{name:"La Trobe",s:"/latrobe.png",sc:1.5},
 {name:"Resimac",s:"/resimac.svg"},
 {name:"Firstmac",s:"/firstmac.svg"},
 {name:"Athena",s:"/athena.svg"},
@@ -70,7 +70,7 @@ export default function App(){
       <div className="tw">
         <div className="tl">Comparing rates across leading lenders</div>
         <div className="ticker">
-          {dl.map((l,i)=>(<div key={i} className="lc"><img src={l.s} alt={l.name} onError={e=>{e.target.style.display="none";e.target.nextSibling.style.display="block";}}/><span style={{display:"none",fontWeight:700,fontSize:".7rem",color:"#0f4c5c"}}>{l.name}</span></div>))}
+          {dl.map((l,i)=>(<div key={i} className="lc"><img src={l.s} alt={l.name} style={{transform:l.sc?"scale("+l.sc+")":undefined,maxHeight:"32px",maxWidth:"100px",width:"auto",height:"auto",objectFit:"contain"}} onError={e=>{e.target.style.display="none";e.target.nextSibling.style.display="block";}}/><span style={{display:"none",fontWeight:700,fontSize:".7rem",color:"#0f4c5c"}}>{l.name}</span></div>))}
         </div>
       </div>
       <div className="sec" style={{textAlign:"center"}}>
